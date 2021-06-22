@@ -20,7 +20,7 @@ import argparse
 import logging
 import os.path
 from ctypes import cast, POINTER
-
+from time import time
 import comtypes
 from comtypes import CLSCTX_ALL
 from homekit import AccessoryServer
@@ -38,6 +38,8 @@ ch.setFormatter(logging.Formatter('%(asctime)s %(filename)s:%(lineno)04d %(level
 logger.addHandler(ch)
 logger.info('starting')
 
+last_changed = time()
+
 
 class MyAudioUtilities(AudioUtilities):
     @staticmethod
@@ -49,19 +51,29 @@ class MyAudioUtilities(AudioUtilities):
 
 
 deviceEnumerator = MyAudioUtilities.GetDeviceEnumerator()
+devices = deviceEnumerator.GetDefaultAudioEndpoint(EDataFlow.eRender.value, ERole.eMultimedia.value)
+interface = devices.Activate(IAudioEndpointVolume._iid_, CLSCTX_ALL, None)
+volume = cast(interface, POINTER(IAudioEndpointVolume))
+oldValue = volume.GetMasterVolumeLevelScalar() * 100
 
 
 def vol_switched(new_value):
-    global oldValue
+    global oldValue, last_changed, volume
     logger.info('=======>  light switched: {x}'.format(x=new_value))
+    if time() - last_changed > 0.1:
+        if new_value == 0:
+            # Get current volume and store in a val, so we can recreate it later
+            oldValue = volume.GetMasterVolumeLevelScalar() * 100
+            vol_changed(0)
+        else:
+            vol_changed(oldValue)
 
 
 def vol_changed(new_value):
+    global last_changed, volume
     logger.info('=======>  light changed: {x}'.format(x=new_value))
+    last_changed = time()
     # Get default audio device using PyCAW
-    devices = deviceEnumerator.GetDefaultAudioEndpoint(EDataFlow.eRender.value, ERole.eMultimedia.value)
-    interface = devices.Activate(IAudioEndpointVolume._iid_, CLSCTX_ALL, None)
-    volume = cast(interface, POINTER(IAudioEndpointVolume))
     # Get current volume
     volume.SetMasterVolumeLevelScalar(new_value / 100, None)
 
@@ -83,7 +95,8 @@ if __name__ == '__main__':
     try:
         httpd = AccessoryServer(config_file, logger)
 
-        accessory = Accessory('PC Volume', 'Tan', 'Das Gute', '0001', '0.1')
+        # fill in whatever you like
+        accessory = Accessory('PC Volume', 'tanmaster', 'PC', '0001', '0.1')
         lightBulbService = LightBulbService()
 
         lightBulbService.set_on_set_callback(vol_switched)
