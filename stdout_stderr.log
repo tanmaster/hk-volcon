@@ -1,0 +1,307 @@
+2021-06-23 22:21:12,086 main.py:0039 INFO starting
+Traceback (most recent call last):
+  File "C:\Users\tan\PycharmProjects\hk-volcon\venv\lib\site-packages\homekit\accessoryserver.py", line 59, in __init__
+    with open(data_file, 'r') as input_file:
+FileNotFoundError: [Errno 2] No such file or directory: './demoserver.json'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\tan\PycharmProjects\hk-volcon\main.py", line 96, in <module>
+    httpd = AccessoryServer(config_file, logger)
+  File "C:\Users\tan\PycharmProjects\hk-volcon\venv\lib\site-packages\homekit\accessoryserver.py", line 1292, in __init__
+    self.data = AccessoryServerData(config_file)
+  File "C:\Users\tan\PycharmProjects\hk-volcon\venv\lib\site-packages\homekit\accessoryserver.py", line 66, in __init__
+    raise ConfigLoadingError('Could not open "{f}" because it does not exist'.format(f=data_file))
+homekit.exceptions.ConfigLoadingError: Could not open "./demoserver.json" because it does not exist
+2021-06-23 22:21:14,354 main.py:0039 INFO starting
+Traceback (most recent call last):
+  File "C:\Users\tan\PycharmProjects\hk-volcon\venv\lib\site-packages\homekit\accessoryserver.py", line 59, in __init__
+    with open(data_file, 'r') as input_file:
+FileNotFoundError: [Errno 2] No such file or directory: './demoserver.json'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\tan\PycharmProjects\hk-volcon\main.py", line 96, in <module>
+    httpd = AccessoryServer(config_file, logger)
+  File "C:\Users\tan\PycharmProjects\hk-volcon\venv\lib\site-packages\homekit\accessoryserver.py", line 1292, in __init__
+    self.data = AccessoryServerData(config_file)
+  File "C:\Users\tan\PycharmProjects\hk-volcon\venv\lib\site-packages\homekit\accessoryserver.py", line 66, in __init__
+    raise ConfigLoadingError('Could not open "{f}" because it does not exist'.format(f=data_file))
+homekit.exceptions.ConfigLoadingError: Could not open "./demoserver.json" because it does not exist
+2021-06-23 22:21:18,593 main.py:0039 INFO starting
+Traceback (most recent call last):
+  File "C:\Users\tan\PycharmProjects\hk-volcon\venv\lib\site-packages\homekit\accessoryserver.py", line 59, in __init__
+    with open(data_file, 'r') as input_file:
+FileNotFoundError: [Errno 2] No such file or directory: './demoserver.json'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\tan\PycharmProjects\hk-volcon\main.py", line 96, in <module>
+    httpd = AccessoryServer(config_file, logger)
+  File "C:\Users\tan\PycharmProjects\hk-volcon\venv\lib\site-packages\homekit\accessoryserver.py", line 1292, in __init__
+    self.data = AccessoryServerData(config_file)
+  File "C:\Users\tan\PycharmProjects\hk-volcon\venv\lib\site-packages\homekit\accessoryserver.py", line 66, in __init__
+    raise ConfigLoadingError('Could not open "{f}" because it does not exist'.format(f=data_file))
+homekit.exceptions.ConfigLoadingError: Could not open "./demoserver.json" because it does not exist
+2021-06-23 22:21:26,837 main.py:0039 INFO starting
+Traceback (most recent call last):
+  File "C:\Users\tan\PycharmProjects\hk-volcon\venv\lib\site-packages\homekit\accessoryserver.py", line 59, in __init__
+    with open(data_file, 'r') as input_file:
+FileNotFoundError: [Errno 2] No such file or directory: './demoserver.json'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\tan\PycharmProjects\hk-volcon\main.py", line 96, in <module>
+    httpd = AccessoryServer(config_file, logger)
+  File "C:\Users\tan\PycharmProjects\hk-volcon\venv\lib\site-packages\homekit\accessoryserver.py", line 1292, in __init__
+    self.data = AccessoryServerData(config_file)
+  File "C:\Users\tan\PycharmProjects\hk-volcon\venv\lib\site-packages\homekit\accessoryserver.py", line 66, in __init__
+    raise ConfigLoadingError('Could not open "{f}" because it does not exist'.format(f=data_file))
+homekit.exceptions.ConfigLoadingError: Could not open "./demoserver.json" because it does not exist
+2021-06-23 22:21:43,093 main.py:0039 INFO starting
+Traceback (most recent call last):
+  File "C:\Users\tan\PycharmProjects\hk-volcon\venv\lib\site-packages\homekit\accessoryserver.py", line 59, in __init__
+    with open(data_file, 'r') as input_file:
+FileNotFoundError: [Errno 2] No such file or directory: './demoserver.json'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\tan\PycharmProjects\hk-volcon\main.py", line 96, in <module>
+    httpd = AccessoryServer(config_file, logger)
+  File "C:\Users\tan\PycharmProjects\hk-volcon\venv\lib\site-packages\homekit\accessoryserver.py", line 1292, in __init__
+    self.data = AccessoryServerData(config_file)
+  File "C:\Users\tan\PycharmProjects\hk-volcon\venv\lib\site-packages\homekit\accessoryserver.py", line 66, in __init__
+    raise ConfigLoadingError('Could not open "{f}" because it does not exist'.format(f=data_file))
+homekit.exceptions.ConfigLoadingError: Could not open "./demoserver.json" because it does not exist
+2021-06-23 22:22:15,366 main.py:0039 INFO starting
+Traceback (most recent call last):
+  File "C:\Users\tan\PycharmProjects\hk-volcon\venv\lib\site-packages\homekit\accessoryserver.py", line 59, in __init__
+    with open(data_file, 'r') as input_file:
+FileNotFoundError: [Errno 2] No such file or directory: './demoserver.json'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\tan\PycharmProjects\hk-volcon\main.py", line 96, in <module>
+    httpd = AccessoryServer(config_file, logger)
+  File "C:\Users\tan\PycharmProjects\hk-volcon\venv\lib\site-packages\homekit\accessoryserver.py", line 1292, in __init__
+    self.data = AccessoryServerData(config_file)
+  File "C:\Users\tan\PycharmProjects\hk-volcon\venv\lib\site-packages\homekit\accessoryserver.py", line 66, in __init__
+    raise ConfigLoadingError('Could not open "{f}" because it does not exist'.format(f=data_file))
+homekit.exceptions.ConfigLoadingError: Could not open "./demoserver.json" because it does not exist
+2021-06-23 22:22:21,619 main.py:0039 INFO starting
+Traceback (most recent call last):
+  File "C:\Users\tan\PycharmProjects\hk-volcon\venv\lib\site-packages\homekit\accessoryserver.py", line 59, in __init__
+    with open(data_file, 'r') as input_file:
+FileNotFoundError: [Errno 2] No such file or directory: './demoserver.json'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\tan\PycharmProjects\hk-volcon\main.py", line 96, in <module>
+    httpd = AccessoryServer(config_file, logger)
+  File "C:\Users\tan\PycharmProjects\hk-volcon\venv\lib\site-packages\homekit\accessoryserver.py", line 1292, in __init__
+    self.data = AccessoryServerData(config_file)
+  File "C:\Users\tan\PycharmProjects\hk-volcon\venv\lib\site-packages\homekit\accessoryserver.py", line 66, in __init__
+    raise ConfigLoadingError('Could not open "{f}" because it does not exist'.format(f=data_file))
+homekit.exceptions.ConfigLoadingError: Could not open "./demoserver.json" because it does not exist
+2021-06-23 22:22:21,857 main.py:0039 INFO starting
+Traceback (most recent call last):
+  File "C:\Users\tan\PycharmProjects\hk-volcon\venv\lib\site-packages\homekit\accessoryserver.py", line 59, in __init__
+    with open(data_file, 'r') as input_file:
+FileNotFoundError: [Errno 2] No such file or directory: './demoserver.json'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\tan\PycharmProjects\hk-volcon\main.py", line 96, in <module>
+    httpd = AccessoryServer(config_file, logger)
+  File "C:\Users\tan\PycharmProjects\hk-volcon\venv\lib\site-packages\homekit\accessoryserver.py", line 1292, in __init__
+    self.data = AccessoryServerData(config_file)
+  File "C:\Users\tan\PycharmProjects\hk-volcon\venv\lib\site-packages\homekit\accessoryserver.py", line 66, in __init__
+    raise ConfigLoadingError('Could not open "{f}" because it does not exist'.format(f=data_file))
+homekit.exceptions.ConfigLoadingError: Could not open "./demoserver.json" because it does not exist
+2021-06-23 22:22:24,113 main.py:0039 INFO starting
+Traceback (most recent call last):
+  File "C:\Users\tan\PycharmProjects\hk-volcon\venv\lib\site-packages\homekit\accessoryserver.py", line 59, in __init__
+    with open(data_file, 'r') as input_file:
+FileNotFoundError: [Errno 2] No such file or directory: './demoserver.json'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\tan\PycharmProjects\hk-volcon\main.py", line 96, in <module>
+    httpd = AccessoryServer(config_file, logger)
+  File "C:\Users\tan\PycharmProjects\hk-volcon\venv\lib\site-packages\homekit\accessoryserver.py", line 1292, in __init__
+    self.data = AccessoryServerData(config_file)
+  File "C:\Users\tan\PycharmProjects\hk-volcon\venv\lib\site-packages\homekit\accessoryserver.py", line 66, in __init__
+    raise ConfigLoadingError('Could not open "{f}" because it does not exist'.format(f=data_file))
+homekit.exceptions.ConfigLoadingError: Could not open "./demoserver.json" because it does not exist
+2021-06-23 22:22:27,121 main.py:0039 INFO starting
+Traceback (most recent call last):
+  File "C:\Users\tan\PycharmProjects\hk-volcon\venv\lib\site-packages\homekit\accessoryserver.py", line 59, in __init__
+    with open(data_file, 'r') as input_file:
+FileNotFoundError: [Errno 2] No such file or directory: './demoserver.json'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\tan\PycharmProjects\hk-volcon\main.py", line 96, in <module>
+    httpd = AccessoryServer(config_file, logger)
+  File "C:\Users\tan\PycharmProjects\hk-volcon\venv\lib\site-packages\homekit\accessoryserver.py", line 1292, in __init__
+    self.data = AccessoryServerData(config_file)
+  File "C:\Users\tan\PycharmProjects\hk-volcon\venv\lib\site-packages\homekit\accessoryserver.py", line 66, in __init__
+    raise ConfigLoadingError('Could not open "{f}" because it does not exist'.format(f=data_file))
+homekit.exceptions.ConfigLoadingError: Could not open "./demoserver.json" because it does not exist
+2021-06-23 22:22:29,369 main.py:0039 INFO starting
+Traceback (most recent call last):
+  File "C:\Users\tan\PycharmProjects\hk-volcon\venv\lib\site-packages\homekit\accessoryserver.py", line 59, in __init__
+    with open(data_file, 'r') as input_file:
+FileNotFoundError: [Errno 2] No such file or directory: './demoserver.json'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\tan\PycharmProjects\hk-volcon\main.py", line 96, in <module>
+    httpd = AccessoryServer(config_file, logger)
+  File "C:\Users\tan\PycharmProjects\hk-volcon\venv\lib\site-packages\homekit\accessoryserver.py", line 1292, in __init__
+    self.data = AccessoryServerData(config_file)
+  File "C:\Users\tan\PycharmProjects\hk-volcon\venv\lib\site-packages\homekit\accessoryserver.py", line 66, in __init__
+    raise ConfigLoadingError('Could not open "{f}" because it does not exist'.format(f=data_file))
+homekit.exceptions.ConfigLoadingError: Could not open "./demoserver.json" because it does not exist
+2021-06-23 22:22:33,626 main.py:0039 INFO starting
+Traceback (most recent call last):
+  File "C:\Users\tan\PycharmProjects\hk-volcon\venv\lib\site-packages\homekit\accessoryserver.py", line 59, in __init__
+    with open(data_file, 'r') as input_file:
+FileNotFoundError: [Errno 2] No such file or directory: './demoserver.json'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\tan\PycharmProjects\hk-volcon\main.py", line 96, in <module>
+    httpd = AccessoryServer(config_file, logger)
+  File "C:\Users\tan\PycharmProjects\hk-volcon\venv\lib\site-packages\homekit\accessoryserver.py", line 1292, in __init__
+    self.data = AccessoryServerData(config_file)
+  File "C:\Users\tan\PycharmProjects\hk-volcon\venv\lib\site-packages\homekit\accessoryserver.py", line 66, in __init__
+    raise ConfigLoadingError('Could not open "{f}" because it does not exist'.format(f=data_file))
+homekit.exceptions.ConfigLoadingError: Could not open "./demoserver.json" because it does not exist
+2021-06-23 22:22:41,870 main.py:0039 INFO starting
+Traceback (most recent call last):
+  File "C:\Users\tan\PycharmProjects\hk-volcon\venv\lib\site-packages\homekit\accessoryserver.py", line 59, in __init__
+    with open(data_file, 'r') as input_file:
+FileNotFoundError: [Errno 2] No such file or directory: './demoserver.json'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\tan\PycharmProjects\hk-volcon\main.py", line 96, in <module>
+    httpd = AccessoryServer(config_file, logger)
+  File "C:\Users\tan\PycharmProjects\hk-volcon\venv\lib\site-packages\homekit\accessoryserver.py", line 1292, in __init__
+    self.data = AccessoryServerData(config_file)
+  File "C:\Users\tan\PycharmProjects\hk-volcon\venv\lib\site-packages\homekit\accessoryserver.py", line 66, in __init__
+    raise ConfigLoadingError('Could not open "{f}" because it does not exist'.format(f=data_file))
+homekit.exceptions.ConfigLoadingError: Could not open "./demoserver.json" because it does not exist
+2021-06-23 22:22:58,126 main.py:0039 INFO starting
+Traceback (most recent call last):
+  File "C:\Users\tan\PycharmProjects\hk-volcon\venv\lib\site-packages\homekit\accessoryserver.py", line 59, in __init__
+    with open(data_file, 'r') as input_file:
+FileNotFoundError: [Errno 2] No such file or directory: './demoserver.json'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\tan\PycharmProjects\hk-volcon\main.py", line 96, in <module>
+    httpd = AccessoryServer(config_file, logger)
+  File "C:\Users\tan\PycharmProjects\hk-volcon\venv\lib\site-packages\homekit\accessoryserver.py", line 1292, in __init__
+    self.data = AccessoryServerData(config_file)
+  File "C:\Users\tan\PycharmProjects\hk-volcon\venv\lib\site-packages\homekit\accessoryserver.py", line 66, in __init__
+    raise ConfigLoadingError('Could not open "{f}" because it does not exist'.format(f=data_file))
+homekit.exceptions.ConfigLoadingError: Could not open "./demoserver.json" because it does not exist
+2021-06-23 22:23:17,255 main.py:0039 INFO starting
+2021-06-23 22:23:18,468 main.py:0113 INFO published device and start serving
+2021-06-23 22:23:18,499 accessoryserver.py:1243 INFO "POST /pair-verify HTTP/1.1" 200 -
+2021-06-23 22:23:18,533 accessoryserver.py:1243 INFO "POST /pair-verify HTTP/1.1" 200 -
+2021-06-23 22:23:18,545 accessoryserver.py:1243 INFO "GET /accessories HTTP/1.1" 200 -
+2021-06-23 22:23:18,629 accessoryserver.py:1243 INFO "PUT /characteristics HTTP/1.1" 204 -
+2021-06-23 22:23:39,930 main.py:0119 INFO unpublish device
+2021-06-23 22:25:19,760 main.py:0039 INFO starting
+2021-06-23 22:25:20,941 main.py:0113 INFO published device and start serving
+2021-06-23 22:25:35,661 accessoryserver.py:1243 INFO "POST /pair-verify HTTP/1.1" 200 -
+2021-06-23 22:25:35,702 accessoryserver.py:1243 INFO "POST /pair-verify HTTP/1.1" 200 -
+2021-06-23 22:25:35,711 accessoryserver.py:1243 INFO "GET /accessories HTTP/1.1" 200 -
+2021-06-23 22:25:35,745 accessoryserver.py:1243 INFO "PUT /characteristics HTTP/1.1" 204 -
+2021-06-23 22:25:35,923 accessoryserver.py:1243 INFO "GET /characteristics?id=1.10,1.1 HTTP/1.1" 200 -
+2021-06-23 22:25:36,779 main.py:0074 INFO =======>  light changed: 29
+2021-06-23 22:25:36,780 main.py:0062 INFO =======>  light switched: 1
+2021-06-23 22:25:36,780 accessoryserver.py:1243 INFO "PUT /characteristics HTTP/1.1" 204 -
+2021-06-23 22:25:36,839 accessoryserver.py:1243 INFO "POST /pair-verify HTTP/1.1" 200 -
+2021-06-23 22:25:36,872 accessoryserver.py:1243 INFO "POST /pair-verify HTTP/1.1" 200 -
+2021-06-23 22:25:36,879 accessoryserver.py:1243 INFO "GET /accessories HTTP/1.1" 200 -
+2021-06-23 22:25:37,031 main.py:0074 INFO =======>  light changed: 38
+2021-06-23 22:25:37,032 main.py:0062 INFO =======>  light switched: 1
+2021-06-23 22:25:37,032 accessoryserver.py:1243 INFO "PUT /characteristics HTTP/1.1" 204 -
+2021-06-23 22:25:37,316 main.py:0074 INFO =======>  light changed: 43
+2021-06-23 22:25:37,316 main.py:0062 INFO =======>  light switched: 1
+2021-06-23 22:25:37,316 accessoryserver.py:1243 INFO "PUT /characteristics HTTP/1.1" 204 -
+2021-06-23 22:25:37,593 main.py:0074 INFO =======>  light changed: 61
+2021-06-23 22:25:37,594 main.py:0062 INFO =======>  light switched: 1
+2021-06-23 22:25:37,594 accessoryserver.py:1243 INFO "PUT /characteristics HTTP/1.1" 204 -
+2021-06-23 22:25:37,857 main.py:0074 INFO =======>  light changed: 25
+2021-06-23 22:25:37,859 main.py:0062 INFO =======>  light switched: 1
+2021-06-23 22:25:37,859 accessoryserver.py:1243 INFO "PUT /characteristics HTTP/1.1" 204 -
+2021-06-23 22:25:38,008 main.py:0074 INFO =======>  light changed: 6
+2021-06-23 22:25:38,009 main.py:0062 INFO =======>  light switched: 1
+2021-06-23 22:25:38,009 accessoryserver.py:1243 INFO "PUT /characteristics HTTP/1.1" 204 -
+2021-06-23 22:25:38,158 main.py:0074 INFO =======>  light changed: 1
+2021-06-23 22:25:38,159 main.py:0062 INFO =======>  light switched: 1
+2021-06-23 22:25:38,159 accessoryserver.py:1243 INFO "PUT /characteristics HTTP/1.1" 204 -
+2021-06-23 22:25:38,462 main.py:0074 INFO =======>  light changed: 5
+2021-06-23 22:25:38,463 main.py:0062 INFO =======>  light switched: 1
+2021-06-23 22:25:38,463 accessoryserver.py:1243 INFO "PUT /characteristics HTTP/1.1" 204 -
+2021-06-23 22:25:38,712 main.py:0074 INFO =======>  light changed: 12
+2021-06-23 22:25:38,712 main.py:0062 INFO =======>  light switched: 1
+2021-06-23 22:25:38,712 accessoryserver.py:1243 INFO "PUT /characteristics HTTP/1.1" 204 -
+2021-06-23 22:25:39,051 main.py:0074 INFO =======>  light changed: 3
+2021-06-23 22:25:39,052 main.py:0062 INFO =======>  light switched: 1
+2021-06-23 22:25:39,052 accessoryserver.py:1243 INFO "PUT /characteristics HTTP/1.1" 204 -
+2021-06-23 22:25:39,242 main.py:0074 INFO =======>  light changed: 0
+2021-06-23 22:25:39,242 main.py:0062 INFO =======>  light switched: 0
+2021-06-23 22:25:39,243 accessoryserver.py:1243 INFO "PUT /characteristics HTTP/1.1" 204 -
+2021-06-23 22:25:39,987 accessoryserver.py:1243 INFO "GET /characteristics?id=1.10,1.1 HTTP/1.1" 200 -
+2021-06-23 22:25:40,360 main.py:0074 INFO =======>  light changed: 44
+2021-06-23 22:25:40,360 main.py:0062 INFO =======>  light switched: 1
+2021-06-23 22:25:40,360 accessoryserver.py:1243 INFO "PUT /characteristics HTTP/1.1" 204 -
+2021-06-23 22:25:41,174 main.py:0074 INFO =======>  light changed: 85
+2021-06-23 22:25:41,175 main.py:0062 INFO =======>  light switched: 1
+2021-06-23 22:25:41,175 accessoryserver.py:1243 INFO "PUT /characteristics HTTP/1.1" 204 -
+2021-06-23 22:25:41,443 main.py:0074 INFO =======>  light changed: 86
+2021-06-23 22:25:41,443 main.py:0062 INFO =======>  light switched: 1
+2021-06-23 22:25:41,443 accessoryserver.py:1243 INFO "PUT /characteristics HTTP/1.1" 204 -
+2021-06-23 22:25:41,699 main.py:0074 INFO =======>  light changed: 24
+2021-06-23 22:25:41,700 main.py:0062 INFO =======>  light switched: 1
+2021-06-23 22:25:41,700 accessoryserver.py:1243 INFO "PUT /characteristics HTTP/1.1" 204 -
+2021-06-23 22:25:42,361 main.py:0074 INFO =======>  light changed: 100
+2021-06-23 22:25:42,362 main.py:0062 INFO =======>  light switched: 1
+2021-06-23 22:25:42,362 accessoryserver.py:1243 INFO "PUT /characteristics HTTP/1.1" 204 -
+2021-06-23 22:25:42,875 main.py:0074 INFO =======>  light changed: 20
+2021-06-23 22:25:42,876 main.py:0062 INFO =======>  light switched: 1
+2021-06-23 22:25:42,876 accessoryserver.py:1243 INFO "PUT /characteristics HTTP/1.1" 204 -
+2021-06-23 22:25:43,242 main.py:0074 INFO =======>  light changed: 8
+2021-06-23 22:25:43,242 main.py:0062 INFO =======>  light switched: 1
+2021-06-23 22:25:43,242 accessoryserver.py:1243 INFO "PUT /characteristics HTTP/1.1" 204 -
+2021-06-23 22:25:43,917 main.py:0074 INFO =======>  light changed: 31
+2021-06-23 22:25:43,918 main.py:0062 INFO =======>  light switched: 1
+2021-06-23 22:25:43,918 accessoryserver.py:1243 INFO "PUT /characteristics HTTP/1.1" 204 -
+2021-06-23 22:25:44,919 accessoryserver.py:1243 INFO "GET /characteristics?id=1.10,1.1 HTTP/1.1" 200 -
+2021-06-23 22:31:02,260 accessoryserver.py:1243 INFO "POST /pair-verify HTTP/1.1" 200 -
+2021-06-23 22:31:02,270 accessoryserver.py:1243 INFO "POST /pair-verify HTTP/1.1" 200 -
+2021-06-23 22:31:02,275 accessoryserver.py:1243 INFO "GET /accessories HTTP/1.1" 200 -
+2021-06-23 22:31:02,561 accessoryserver.py:1243 INFO "POST /pair-verify HTTP/1.1" 200 -
+2021-06-23 22:31:02,576 accessoryserver.py:1243 INFO "POST /pair-verify HTTP/1.1" 200 -
+2021-06-23 22:31:02,587 accessoryserver.py:1243 INFO "GET /accessories HTTP/1.1" 200 -
+2021-06-23 22:31:02,659 accessoryserver.py:1243 INFO "PUT /characteristics HTTP/1.1" 204 -

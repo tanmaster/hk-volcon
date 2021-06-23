@@ -89,7 +89,7 @@ def setup_args_parser():
 if __name__ == '__main__':
     args = setup_args_parser()
 
-    config_file = os.path.expanduser(args.file)
+    config_file = "{}//{}".format(os.path.dirname(os.path.realpath(__file__)), args.file)
 
     # create a server and an accessory an run it unless ctrl+c was hit
     try:
