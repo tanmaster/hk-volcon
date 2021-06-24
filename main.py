@@ -30,6 +30,9 @@ from homekit.model.services import LightBulbService
 from pycaw.pycaw import AudioUtilities, IAudioEndpointVolume, EDataFlow, ERole, CLSID_MMDeviceEnumerator, \
     IMMDeviceEnumerator
 
+import pythoncom
+pythoncom.CoInitialize()
+
 # setup logger
 logger = logging.getLogger('accessory')
 logger.setLevel(logging.INFO)
@@ -50,32 +53,36 @@ class MyAudioUtilities(AudioUtilities):
             comtypes.CLSCTX_INPROC_SERVER)
 
 
-deviceEnumerator = MyAudioUtilities.GetDeviceEnumerator()
-devices = deviceEnumerator.GetDefaultAudioEndpoint(EDataFlow.eRender.value, ERole.eMultimedia.value)
-interface = devices.Activate(IAudioEndpointVolume._iid_, CLSCTX_ALL, None)
-volume = cast(interface, POINTER(IAudioEndpointVolume))
-oldValue = volume.GetMasterVolumeLevelScalar() * 100
+def get_current_device_volume():
+    pythoncom.CoInitialize()
+    deviceEnumerator = MyAudioUtilities.GetDeviceEnumerator()
+    devices = deviceEnumerator.GetDefaultAudioEndpoint(EDataFlow.eRender.value, ERole.eMultimedia.value)
+    interface = devices.Activate(IAudioEndpointVolume._iid_, CLSCTX_ALL, None)
+    return cast(interface, POINTER(IAudioEndpointVolume))
+
+
+oldValue = get_current_device_volume().GetMasterVolumeLevelScalar() * 100
 
 
 def vol_switched(new_value):
-    global oldValue, last_changed, volume
+    global oldValue, last_changed
     logger.info('=======>  light switched: {x}'.format(x=new_value))
     if time() - last_changed > 0.1:
         if new_value == 0:
             # Get current volume and store in a val, so we can recreate it later
-            oldValue = volume.GetMasterVolumeLevelScalar() * 100
+            oldValue = get_current_device_volume().GetMasterVolumeLevelScalar() * 100
             vol_changed(0)
         else:
             vol_changed(oldValue)
 
 
 def vol_changed(new_value):
-    global last_changed, volume
+    global last_changed
     logger.info('=======>  light changed: {x}'.format(x=new_value))
     last_changed = time()
     # Get default audio device using PyCAW
     # Get current volume
-    volume.SetMasterVolumeLevelScalar(new_value / 100, None)
+    get_current_device_volume().SetMasterVolumeLevelScalar(new_value / 100, None)
 
 
 def setup_args_parser():

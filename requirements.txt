@@ -12,3 +12,4 @@ pycaw==20181226
 pycparser==2.20
 tlv8==0.9.0
 zeroconf==0.31.0
+pywin32==301
