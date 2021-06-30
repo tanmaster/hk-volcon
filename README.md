@@ -24,3 +24,6 @@ nssm.exe stop hk-volcon
 nssm.exe remove hk-volcon confirm
 delete project directory
 ```
+
+## Known issues
+The volume slider will show up as a lightbulb in your controlcenter.
