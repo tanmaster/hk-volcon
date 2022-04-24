@@ -5,6 +5,8 @@ Control your Windows PC Volume from you iOS Device's Control Center!
 ## Install as a Windows Service
 - python3 is required, get it if you don't have it
 - git clone project
+- set the IP address of your machine in demoserver.json
+  - it is recommended to set a static IP in your local home network for this particular machine
 - install requirements with `pip install -r requirements.txt`
 - Download [nssm](https://nssm.cc/download) 
     - extract zip
