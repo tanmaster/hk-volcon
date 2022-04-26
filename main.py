@@ -7,7 +7,6 @@ import os.path
 import platform
 import socket
 from random import randint
-from socket import socket
 
 from homekit import AccessoryServer
 from homekit.model import Accessory
@@ -15,7 +14,6 @@ from homekit.model.characteristics import BrightnessCharacteristic
 from homekit.model.services import LightBulbService
 
 from OS.interface import VolumeChangerInterface
-from OS.windows import WindowsVolumeChanger
 
 # setup logger
 logger = logging.getLogger('accessory')
@@ -45,12 +43,12 @@ def generate_mac():
 def get_network_ip():
     s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
     s.setsockopt(socket.SOL_SOCKET, socket.SO_BROADCAST, 1)
-    s.connect(('<broadcast>', 0))
+    s.connect(('<broadcast>', 1))
     return s.getsockname()[0]
 
 
 def generate_pin():
-    return '{}-{}-{}'.format(randint(0, 999), randint(0, 99), randint(0, 999))
+    return '{:03d}-{:02d}-{:03d}'.format(randint(0, 999), randint(0, 99), randint(0, 999))
 
 
 if __name__ == '__main__':
@@ -79,17 +77,20 @@ if __name__ == '__main__':
         httpd = AccessoryServer(config_path, logger)
 
         # fill in whatever you like
-        accessory = Accessory('PC Volume', 'tanmaster', 'PC', '0001', '0.1')
+        accessory = Accessory('PC Volume', 'tanmaster', 'PC', '{:04d}'.format(randint(0, 9999)), '0.1')
         lightBulbService = LightBulbService()
         volume_changer: VolumeChangerInterface
 
         current_os = platform.system()
         if current_os == 'Windows':
+            from OS.windows import WindowsVolumeChanger
             volume_changer = WindowsVolumeChanger(logger)
         elif current_os == 'Linux':
-            volume_changer = WindowsVolumeChanger(logger)
+            # volume_changer = WindowsVolumeChanger(logger)
+            pass
         elif current_os == 'Darwin':
-            volume_changer = WindowsVolumeChanger(logger)
+            from OS.macos import MacintoshVolumeChanger
+            volume_changer = MacintoshVolumeChanger(logger)
         else:
             logger.error('Unsupported OS')
             exit(-1)

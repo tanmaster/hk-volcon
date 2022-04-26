@@ -9,11 +9,10 @@ class VolumeChangerInterface:
         else:
             self.logger = logger
 
-    # todo find out type and adjust
-    def vol_switched(self, new_value):
+    def vol_switched(self, new_value: int):
         """Callback function for when the 'Sound' is switched on or off"""
         pass
 
-    def vol_changed(self, new_value):
+    def vol_changed(self, new_value: int):
         """Callback function for when the numerical value for 'Volume' changes"""
         pass
