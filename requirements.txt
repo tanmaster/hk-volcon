@@ -1,5 +1,5 @@
 cffi==1.14.5
-comtypes==1.1.10
+comtypes==1.1.11
 cryptography==3.4.7
 ed25519==1.5
 enum34==1.1.10
