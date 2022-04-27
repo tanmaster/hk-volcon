@@ -11,13 +11,13 @@ class VolumeChangerInterface:
     @staticmethod
     def get_current_device_volume():
         """This function needs to be implemented by the inheriting class to provide a volume getter for the
-        current System."""
+        current system."""
         pass
 
     @staticmethod
     def set_current_volume(target: int):
         """This function needs to be implemented by the inheriting class to provide a volume setter for the
-        current System."""
+        current system."""
         pass
 
     def __init__(self, logger=None):

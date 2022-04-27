@@ -1,9 +1,9 @@
 # hk-volcon
 
-Control your Windows PC Volume from you iOS Device's Control Center!
+Control your PC Volume from you iOS Device's Control Center!
 
 ## Install
-- python3 is required, get it if you don't have it
+- python3 is required, [get it if you don't have it](https://www.python.org/downloads/)
 - `git clone ` to a directory where you don't mind it staying
 - create a new virtual environment to install dependencies:
   - windows: `c:\>c:\Python35\python -m venv c:\path\to\myenv` and activate with `C:\> <venv>\Scripts\activate.bat` (path to python can be found with `where python`)
