@@ -2,11 +2,15 @@
 
 Control your PC Volume from you iOS Device's Control Center!
 
+![Demonstration of hk-volcon](demo.gif)
+
+If you experience any problems or instructions are unclear please open a new issue.
+
 ## Install
 - python3 is required, [get it if you don't have it](https://www.python.org/downloads/)
 - `git clone ` to a directory where you don't mind it staying
-- create a new virtual environment to install dependencies:
-  - windows: `c:\>c:\Python35\python -m venv c:\path\to\myenv` and activate with `C:\> <venv>\Scripts\activate.bat` (path to python can be found with `where python`)
+- create a new virtual environment to install dependencies. from the project dir do:
+  - windows (powershell): `python -m venv ./venv` and activate with `./venv/Scripts/Activate.ps1`
   - linux/mac: `virtualenv -p python3 venv` and activate with `source venv/bin/activate`
 - install the correct dependencies for your machine's OS with one of:
   - `pip install -r requirements/windows.txt`
@@ -16,14 +20,14 @@ Control your PC Volume from you iOS Device's Control Center!
 ### Windows Service
 - Download [nssm](https://nssm.cc/download) 
     - extract zip
-- copy desired nssm.exe into project dir
-- ```where python```
+- copy nssm.exe into project dir
+- get the path of the virtual environment's python with `(Get-Command python).source`
 - You need a admin privileged cmd instance
-- replace the below paths with the script locations on your machine and execute them 
+- replace the below paths with the correct locations on your machine and execute them 
 ```cmd
-nssm.exe install hk-volcon "C:\Users\tan\PycharmProjects\hk-volcon\venv\Scripts\python.exe" "C:\Users\tan\PycharmProjects\hk-volcon\main.py"
-nssm.exe set hk-volcon AppStdout "C:\Users\tan\PycharmProjects\hk-volcon\stdout_stderr.log"
-nssm.exe set hk-volcon AppStderr "C:\Users\tan\PycharmProjects\hk-volcon\stdout_stderr.log"
+nssm.exe install hk-volcon "C:\Users\tan\Desktop\hk-volcon\venv\Scripts\python.exe" "C:\Users\tan\Desktop\hk-volcon\main.py"
+nssm.exe set hk-volcon AppStdout "C:\Users\tan\Desktop\hk-volcon\stdout_stderr.log"
+nssm.exe set hk-volcon AppStderr "C:\Users\tan\Desktop\hk-volcon\stdout_stderr.log"
 nssm.exe start hk-volcon
 ```
 - the pairing code is generated once with the initial start and can be found in the `stdout_stderr.log` or in `server.json`
@@ -59,10 +63,16 @@ rm ~/.config/systemd/user/hk-volcon.service
 # delete project directory
 ```
 
-
 ### extras
 I use a dual-boot setup on a single machine between Windows and Ubuntu. Creating the server.json on one OS and using it on the other as well allows for adding a single device to the Home app while controlling the volume for both OS's.
+
+## Program Arguments
+- `-f` Override file name of the config json file. Defaults to `server.json`.
+- `-n` Override display name of the device. Defaults to `hk-volcon` (can also be changed later in control center).
+- `-p` Override TCP port to use. Defaults to 56565
+- `-ip` Override IP address of local machine. Use this when the correct IP could not be detected.
 
 ## Known issues
 - The volume slider will show up as a lightbulb in your controlcenter.
 - If you use hk-volcon on more than one machine at the same time you may need to provide different names for either of the instances
+- Sometimes it can be difficult to detect the correct IP address for your machine. A `-ip` flag allows for manually overriding your ip address.

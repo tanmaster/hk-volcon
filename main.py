@@ -32,7 +32,8 @@ def setup_args_parser():
                         default='hk-volcon', help='Display name of the server.')
     parser.add_argument('-p', action='store', required=False, dest='port',
                         default=56565, help='TCP port at which hk-volcon shall listen')
-
+    parser.add_argument('-ip', action='store', required=False, dest='ip_address',
+                        default=None, help='Override automatically detected IP address')
     return parser.parse_args()
 
 
@@ -60,7 +61,7 @@ if __name__ == '__main__':
     # set some config parameters and save it
     logger.debug('Trying to read file {}'.format(args.file))
     config_data = json.load(open(args.file, 'r'))
-    config_data['host_ip'] = get_network_ip()
+    config_data['host_ip'] = get_network_ip() if args.ip_address is None else args.ip_address
     config_data['name'] = args.name
     if 'accessory_pin' not in config_data:
         config_data['accessory_pin'] = generate_pin()
