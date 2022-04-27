@@ -1,6 +1,6 @@
 # hk-volcon
 
-Control your computer's sound volume with HomeKit (e.g. your iOS device's Control Center)!
+Control your computer's sound volume with HomeKit!
 
 ![Demonstration of hk-volcon](demo.gif)
 
