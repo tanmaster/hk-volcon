@@ -36,15 +36,15 @@ def setup_args_parser():
     return parser.parse_args()
 
 
-def generate_mac():
-    return "02:00:00:%02x:%02x:%02x" % (randint(0, 255), randint(0, 255), randint(0, 255))
-
-
 def get_network_ip():
     s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
     s.setsockopt(socket.SOL_SOCKET, socket.SO_BROADCAST, 1)
     s.connect(('<broadcast>', 1))
     return s.getsockname()[0]
+
+
+def generate_mac():
+    return "02:00:00:%02x:%02x:%02x" % (randint(0, 255), randint(0, 255), randint(0, 255))
 
 
 def generate_pin():
@@ -57,7 +57,7 @@ if __name__ == '__main__':
     config_path = "{}//{}".format(os.path.dirname(os.path.realpath(__file__)), args.file)
     if not os.path.exists(args.file):
         json.dump({}, open(args.file, 'w'))
-    # set some config parameters save it config
+    # set some config parameters and save it
     logger.debug('Trying to read file {}'.format(args.file))
     config_data = json.load(open(args.file, 'r'))
     config_data['host_ip'] = get_network_ip()
@@ -76,18 +76,18 @@ if __name__ == '__main__':
     try:
         httpd = AccessoryServer(config_path, logger)
 
+        current_os = platform.system()
         # fill in whatever you like
-        accessory = Accessory('PC Volume', 'tanmaster', 'PC', '{:04d}'.format(randint(0, 9999)), '0.1')
+        accessory = Accessory('PC Volume', 'tanmaster', current_os, '{:04d}'.format(randint(0, 9999)), '0.1')
         lightBulbService = LightBulbService()
         volume_changer: VolumeChangerInterface
 
-        current_os = platform.system()
         if current_os == 'Windows':
             from OS.windows import WindowsVolumeChanger
             volume_changer = WindowsVolumeChanger(logger)
         elif current_os == 'Linux':
-            # volume_changer = WindowsVolumeChanger(logger)
-            pass
+            from OS.linux import LinuxVolumeChanger
+            volume_changer = LinuxVolumeChanger(logger)
         elif current_os == 'Darwin':
             from OS.macos import MacintoshVolumeChanger
             volume_changer = MacintoshVolumeChanger(logger)

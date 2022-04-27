@@ -25,6 +25,7 @@ nssm.exe set hk-volcon AppStdout "C:\Users\tan\PycharmProjects\hk-volcon\stdout_
 nssm.exe set hk-volcon AppStderr "C:\Users\tan\PycharmProjects\hk-volcon\stdout_stderr.log"
 nssm.exe start hk-volcon
 ```
+- the pairing code is generated once with the initial start and can be found in the log file or in demoserver.json
 
 #### Uninstall
 ```cmd
@@ -38,9 +39,17 @@ delete project directory
 - copy plist: `cp org.hk-volcon.plist ~/Library/LaunchAgents`
 - load the agent `launchctl load ~/Library/LaunchAgents/org.hk-volcon.plist`
 - the script should start automatically as agent
+- the pairing code is generated once with the initial start and can be found in the log file or in demoserver.json
 
-## add to home 
-- the pairing code is generated once with the initial start and can be found in the log file
+
+### linux systemd module
+The script relies on ALSA, so it won't work if it is not installed
+- replace the absolute paths in `hk-volcon.service` with the script locations on your machine
+- create a directory `~/.config/systemd/user/` if it does not exist
+- copy the hk-volcon.service: `cp hk-volcon.service ~/.config/systemd/user/`
+- `systemctl --user enable hk-volcon.service`
+- `systemctl --user start hk-volcon.service`
+- the pairing code is generated once with the initial start and can be found in the log file or in demoserver.json
 
 ## Known issues
 - The volume slider will show up as a lightbulb in your controlcenter.

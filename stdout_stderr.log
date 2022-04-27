@@ -1,12 +1,12 @@
+2022-04-27 14:27:34,554 main.py:0025 INFO starting
+2022-04-27 14:27:34,554 main.py:0062 DEBUG Trying to read file demoserver.json
+2022-04-27 14:27:34,554 main.py:0073 INFO Your pin is 239-48-109
+2022-04-27 14:27:35,737 main.py:0111 INFO published device and start serving
+2022-04-27 14:30:28,039 accessoryserver.py:1243 INFO "POST /pair-verify HTTP/1.1" 200 -
+2022-04-27 14:30:28,513 accessoryserver.py:1243 INFO "POST /pair-verify HTTP/1.1" 200 -
+2022-04-27 14:30:28,517 accessoryserver.py:1253 DEBUG Unicode exception 'ascii' codec can't decode byte 0xca in position 4: ordinal not in range(128)
+2022-04-27 14:30:28,518 accessoryserver.py:1243 INFO "GET /accessories HTTP/1.1" 200 -
 
-2022-04-26 12:58:02,789 main.py:0024 INFO starting
-2022-04-26 12:58:02,790 main.py:0061 DEBUG Trying to read file demoserver.json
-2022-04-26 12:58:02,790 main.py:0072 INFO Your pin is 498-25-074
-2022-04-26 12:58:04,092 main.py:0107 INFO published device and start serving
-2022-04-26 12:58:04,179 accessoryserver.py:1243 INFO "POST /pair-verify HTTP/1.1" 200 -
-2022-04-26 12:58:04,202 accessoryserver.py:1243 INFO "POST /pair-verify HTTP/1.1" 200 -
-2022-04-26 12:58:04,202 accessoryserver.py:1253 DEBUG Unicode exception 'ascii' codec can't decode byte 0xd0 in position 4: ordinal not in range(128)
-2022-04-26 12:58:04,204 accessoryserver.py:1243 INFO "GET /accessories HTTP/1.1" 200 -
 2022-04-26 12:58:05,129 accessoryserver.py:1243 INFO "POST /pair-verify HTTP/1.1" 200 -
 2022-04-26 12:58:05,162 accessoryserver.py:1243 INFO "POST /pair-verify HTTP/1.1" 200 -
 2022-04-26 12:58:05,174 accessoryserver.py:1253 DEBUG Unicode exception 'ascii' codec can't decode byte 0xa8 in position 2: ordinal not in range(128)
