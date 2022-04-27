@@ -51,6 +51,14 @@ The script relies on ALSA, so it won't work if it is not installed
 - `systemctl --user start hk-volcon.service`
 - the pairing code is generated once with the initial start and can be found in the `stdout_stderr.log` or in `server.json`
 
+#### Uninstall
+```bash
+systemctl --user stop hk-volcon.service
+systemctl --user disable hk-volcon.service
+rm ~/.config/systemd/user/hk-volcon.service
+# delete project directory
+```
+
 
 ### extras
 I use a dual-boot setup on a single machine between Windows and Ubuntu. Creating the server.json on one OS and using it on the other as well allows for adding a single device to the Home app while controlling the volume for both OS's.
