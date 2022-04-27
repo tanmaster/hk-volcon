@@ -17,7 +17,7 @@ from OS.interface import VolumeChangerInterface
 
 # setup logger
 logger = logging.getLogger('accessory')
-logger.setLevel(logging.DEBUG)
+logger.setLevel(logging.INFO)
 ch = logging.StreamHandler()
 ch.setFormatter(logging.Formatter('%(asctime)s %(filename)s:%(lineno)04d %(levelname)s %(message)s'))
 logger.addHandler(ch)
@@ -40,7 +40,7 @@ def setup_args_parser():
 def get_network_ip():
     s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
     s.setsockopt(socket.SOL_SOCKET, socket.SO_BROADCAST, 1)
-    s.connect(('<broadcast>', 1))
+    s.connect(('<broadcast>', 0))
     return s.getsockname()[0]
 
 
@@ -55,23 +55,21 @@ def generate_pin():
 if __name__ == '__main__':
     args = setup_args_parser()
 
-    config_path = "{}//{}".format(os.path.dirname(os.path.realpath(__file__)), args.file)
-    if not os.path.exists(args.file):
-        json.dump({}, open(args.file, 'w'))
-    # set some config parameters and save it
-    logger.debug('Trying to read file {}'.format(args.file))
-    config_data = json.load(open(args.file, 'r'))
-    config_data['host_ip'] = get_network_ip() if args.ip_address is None else args.ip_address
-    config_data['name'] = args.name
-    if 'accessory_pin' not in config_data:
-        config_data['accessory_pin'] = generate_pin()
-    config_data['category'] = 'Lightbulb'
-    config_data['host_port'] = args.port
-    if 'accessory_pairing_id' not in config_data:
-        config_data['accessory_pairing_id'] = generate_mac()
-    config_data['c#'] = 0
-    logger.info('Your pin is {}'.format(config_data['accessory_pin']))
-    json.dump(config_data, open(config_path, 'w'))
+    config_path = os.path.join(os.path.dirname(os.path.realpath(__file__)), args.file)
+    if not os.path.exists(config_path):
+        logger.info('Creating new server file at {}'.format(config_path))
+        # set some config parameters and save it
+        config_data = {
+            'host_ip': get_network_ip() if args.ip_address is None else args.ip_address,
+            'name': args.name,
+            'accessory_pin': generate_pin(),
+            'category': 'Lightbulb',
+            'host_port': args.port,
+            'accessory_pairing_id': generate_mac(),
+            'c#': 0
+        }
+        logger.info('Your pin is {}'.format(config_data['accessory_pin']))
+        json.dump(config_data, open(config_path, 'w'))
 
     # create a server and an accessory and run it until ctrl+c is hit
     try:

@@ -74,5 +74,6 @@ I use a dual-boot setup on a single machine between Windows and Ubuntu. Creating
 
 ## Known issues
 - The volume slider will show up as a lightbulb in your controlcenter.
+- 
 - If you use hk-volcon on more than one machine at the same time you may need to provide different names for either of the instances
 - Sometimes it can be difficult to detect the correct IP address for your machine. A `-ip` flag allows for manually overriding your ip address.
