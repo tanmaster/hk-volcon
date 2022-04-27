@@ -9,8 +9,5 @@ Restart=always
 RestartSec=1
 WorkingDirectory=/home/tan/Desktop/hk-volcon/
 ExecStart=/home/tan/Desktop/hk-volcon/venv/bin/python /home/tan/Desktop/hk-volcon/main.py
-StandardOutput=file:/home/tan/Desktop/hk-volcon/stdout_stderr.log
-StandardError=file:/home/tan/Desktop/hk-volcon/stdout_stderr.log
-
-[Install]
-WantedBy=multi-user.target
+StandardOutput=append:/home/tan/Desktop/hk-volcon/stdout_stderr.log
+StandardError=append:/home/tan/Desktop/hk-volcon/stdout_stderr.log
