@@ -8,7 +8,7 @@ If you experience any problems or instructions are unclear please open a new iss
 
 ## Install
 - python3 is required, [get it if you don't have it](https://www.python.org/downloads/)
-- `git clone ` to a directory where you don't mind it staying
+- `git clone` to a directory where you don't mind it staying
 - create a new virtual environment to install dependencies. from the project dir do:
   - windows (powershell): `python -m venv ./venv` and activate with `./venv/Scripts/Activate.ps1`
   - linux/mac: `virtualenv -p python3 venv` and activate with `source venv/bin/activate`
