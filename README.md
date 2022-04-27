@@ -1,6 +1,6 @@
 # hk-volcon
 
-Control your Computer's sound volume with HomeKit (e.g. your iOS device's Control Center)!
+Control your computer's sound volume with HomeKit (e.g. your iOS device's Control Center)!
 
 ![Demonstration of hk-volcon](demo.gif)
 
@@ -75,7 +75,7 @@ I use a dual-boot setup on a single machine between Windows and Ubuntu. Creating
 - `-ip` Override IP address of local machine. Use this when the correct IP could not be detected.
 
 ## Known issues
-- The volume slider will show up as a lightbulb in your controlcenter.
+- The volume slider will show up as a lightbulb in your control center.
 - After booting the computer the iOS device may need some time (1-2 minutes) to connect to the homekit server
 - If you use hk-volcon on more than one machine at the same time you may need to provide different names for either of the instances
 - Sometimes it can be difficult to detect the correct IP address for your machine. A `-ip` flag allows for manually overriding your ip address.
