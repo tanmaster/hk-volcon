@@ -26,8 +26,8 @@ logger.info('starting')
 
 def setup_args_parser():
     parser = argparse.ArgumentParser(description='HomeKit volume control server')
-    parser.add_argument('-f', action='store', required=False, dest='file', default='demoserver.json',
-                        help='File with the config data (defaults to ./demoserver.json)')
+    parser.add_argument('-f', action='store', required=False, dest='file', default='server.json',
+                        help='File with the config data (defaults to ./server.json)')
     parser.add_argument('-n', action='store', required=False, dest='name',
                         default='hk-volcon', help='Display name of the server.')
     parser.add_argument('-p', action='store', required=False, dest='port',
