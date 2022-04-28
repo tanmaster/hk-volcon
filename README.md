@@ -1,6 +1,6 @@
 # hk-volcon
 
-Control your computer's sound volume with HomeKit! Works with Windows, mac and linux!
+Control your computer's sound volume with HomeKit! Works with Windows, macOS and Linux!
 
 ![Demonstration of hk-volcon](demo.gif)
 
