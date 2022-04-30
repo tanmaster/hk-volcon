@@ -1,6 +1,6 @@
 # hk-volcon
 
-Control your PC Volume from you iOS Device's Control Center!
+Control your computer's sound volume with HomeKit on Windows, macOS and Linux!
 
 ![Demonstration of hk-volcon](demo.gif)
 
@@ -8,7 +8,7 @@ If you experience any problems or instructions are unclear please open a new iss
 
 ## Install
 - python3 is required, [get it if you don't have it](https://www.python.org/downloads/)
-- `git clone ` to a directory where you don't mind it staying
+- `git clone` the project into a directory where you don't mind it staying
 - create a new virtual environment to install dependencies. from the project dir do:
   - windows (powershell): `python -m venv ./venv` and activate with `./venv/Scripts/Activate.ps1`
   - linux/mac: `virtualenv -p python3 venv` and activate with `source venv/bin/activate`
@@ -16,6 +16,8 @@ If you experience any problems or instructions are unclear please open a new iss
   - `pip install -r requirements/windows.txt`
   - `pip install -r requirements/macos.txt`
   - `pip install -r requirements/linux-pulse.txt`
+- you can try hk-volume out by running `python main.py` from within the virtual environment (see [Known Issues](#known-issues) in case of problems)
+- in your home app, you will need to pair the new device. the pairing code can be found in `stdout-stderr.log`, generated in the project directory
 
 ### Windows Service
 - Download [nssm](https://nssm.cc/download) 
@@ -73,7 +75,7 @@ I use a dual-boot setup on a single machine between Windows and Ubuntu. Creating
 - `-ip` Override IP address of local machine. Use this when the correct IP could not be detected.
 
 ## Known issues
-- The volume slider will show up as a lightbulb in your controlcenter.
-- After booting the iOS device may need some time (1-2 minutes) to connect to the homekit server
+- The volume slider will show up as a lightbulb in your control center.
+- After booting the computer the iOS device may need some time (1-2 minutes) to connect to the homekit server
 - If you use hk-volcon on more than one machine at the same time you may need to provide different names for either of the instances
 - Sometimes it can be difficult to detect the correct IP address for your machine. A `-ip` flag allows for manually overriding your ip address.
